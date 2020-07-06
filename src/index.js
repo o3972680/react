@@ -7,15 +7,18 @@ import store from './store';
 import { countAddAction, countReduceAction } from './actions/counter_action';
 import { loadPostsAction } from './actions/post_action';
 
-store.dispatch(countAddAction);
-store.dispatch(countReduceAction);
-store.dispatch(loadPostsAction);
 
+import { Provider } from 'react-redux';
 
+// store.dispatch(countAddAction);
+// store.dispatch(countReduceAction);
+// store.dispatch(loadPostsAction);
+
+// 通过provider把redux和react连接，store传递到react项目中
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );
 
