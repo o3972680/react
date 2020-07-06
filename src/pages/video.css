@@ -1,0 +1,8 @@
+.topNav ul {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.topNav ul li {
+  margin-right: 2rem;
+}
